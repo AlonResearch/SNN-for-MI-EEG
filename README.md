@@ -1,7 +1,7 @@
 # Lightweight and Efficient Spiking Neural Networks for EEG-based Motor Imagery Classification
 code for paper:Constructing Lightweight and Efficient Spiking Neural Networks for EEG-based Motor Imagery Classification
 # Requirements
-spikinjelly 0.0.0.0.14
+spikingjelly 0.0.0.0.14
 pytorch 1.12.1
 scikit-learn 1.5.1
 scipy 1.13.1
