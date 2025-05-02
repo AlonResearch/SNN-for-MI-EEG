@@ -1,4 +1,4 @@
 # Ignore all zip files
 *.zip
-matlabtoolkits/
+Matlab Toolkits/
 SNNpaper.pdf
