@@ -1,4 +1,4 @@
-# SNN for EEG-based Motor Imagery Classification
+# SNN for MI-EEG Classification
 Forked from original https://doi.org/10.1016/j.bspc.2024.107000 "Constructing Lightweight and Efficient Spiking Neural Networks for EEG-based Motor Imagery Classification" by [@XiaoJianLiao](https://github.com/XiaoJianLiao)
 
 ## Requirements
