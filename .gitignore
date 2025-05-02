@@ -1,2 +1,5 @@
 # Ignore all zip files
 *.zip
+Datasets/MI3class1Limb/derivatives/sub-011/eeg/sub-011_task-motorimagery_eeg.mat
+Liao et al. - 2025 - Constructing lightweight and efficient spiking neural networks for EEG-based motor imagery classific.pdf
+Data processing Matlab/eeglab/
