@@ -9,14 +9,14 @@ scipy 1.13.1
 
 ## File list
 ### Original Scripts
-	Pipeline.py:An example for constructing lightweight and efficient spiking neural networks for EEG-based motor imagery classification
+	Pipeline.py: An example for constructing lightweight and efficient spiking neural networks for EEG-based motor imagery classification
 
 	Train_ANN.py: Training LENet under ANN structure
 
-	Tset_SNN.py :Convert trained LENet to SNN
+	Tset_SNN.py : Convert trained LENet to SNN
 
 ### DataSets
-  BCICIV_2a_gdf_{https://www.bbci.de/competition/iv/download/index.html}: The preprocessed dataset for testing the framework
+  [BCICIV_2a_gdf](https://www.bbci.de/competition/iv/download/index.html): The preprocessed dataset for testing the framework
 
-### Jupyter Notebooks (for google colab)
+### Jupyter Notebooks (for Google Colab)
   SNN_for_EEG_based_Motor_Imagery_Classification.ipynb: All the scripts in one file
