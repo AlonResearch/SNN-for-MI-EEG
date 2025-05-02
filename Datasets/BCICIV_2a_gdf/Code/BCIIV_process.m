@@ -3,7 +3,7 @@
  
 clear
 clc
-loadDir = 'Datasets\BCICIV_2a_gdf';
+loadDir = 'Datasets\BCICIV_2a_gdf\';
 saveDir = 'Datasets\BCICIV_2a_gdf\Derivatives\';
 
 %
@@ -19,7 +19,7 @@ for NumSub = 3: TotSub % Iterate on the Subject list, the first two are "." and 
     savePathSet = [saveDir,NameFilePure,'.set']; %save path for the .set file
     savePathMat = [saveDir,NameFilePure,'.mat']; %save path for the .mat file
     disp(savePathMat) % display the path of the file being created
-    if ~exist(savePathMat, "file") % Do not replace the file
+    if exist(savePathMat, "file") % Do not replace the file
         %
         % Now Preprocess the data
         %
@@ -47,7 +47,7 @@ for NumSub = 3: TotSub % Iterate on the Subject list, the first two are "." and 
         % EEG = pop_rmbase(EEG, [1 EEG.times(end)]);   
         % EEGbaseless = EEG;         
 
-        % remove the EOG with AAR_fd
+        % remove the EOG with AAR_fd (Automatic Artifact Removal)
         EEG = pop_autobsseog( EEG, [416.32], [416.32], 'sobi', {'eigratio', [1000000]}, 'eog_fd', {'range',[2  22]});
         EEGclean = EEG;
 

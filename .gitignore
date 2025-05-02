@@ -1,6 +1,6 @@
 # Ignore all zip files
 *.zip
-Matlab Toolkits/
+MatlabToolkits/
 SNNpaper.pdf
 MI3DatasetPaper.pdf
 Datasets/MI3class1Limb/derivatives/sub-011/eeg/sub-011_task-motorimagery_eeg.mat
