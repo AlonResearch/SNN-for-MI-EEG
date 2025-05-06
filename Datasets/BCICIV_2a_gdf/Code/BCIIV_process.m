@@ -16,7 +16,6 @@ for NumSub = 3: TotSub % Iterate on the Subject list, the first two are "." and 
     NameSub = ListSub(NumSub).name;
     Pathfile = [loadDir, NameSub]; % Path to the sub file'
     NameFilePure = NameSub(1:(find(NameSub=='.')-1));
-    savePathSet = [saveDir,NameFilePure,'.set']; %save path for the .set file
     savePathMat = [saveDir,NameFilePure,'.mat']; %save path for the .mat file
     disp(savePathMat) % display the path of the file being created
     if exist(savePathMat, "file") % Do not replace the file

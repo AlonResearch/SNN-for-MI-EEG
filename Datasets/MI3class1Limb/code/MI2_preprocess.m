@@ -3,8 +3,8 @@
 
 clear
 clc
-loadDir = 'E:\Lab\MI_3class_1limb\dataset\sourcedata\';
-saveDir = 'E:\Lab\MI_3class_1limb\MI\';
+loadDir = 'Datasets\BCICIV_2a_gdf\';
+saveDir = 'Datasets\BCICIV_2a_gdf\Derivatives\';
 
 %
 % LIST ALL THE SUBJECTS
@@ -70,7 +70,7 @@ for NumSub = 3: TotSub % Iterate on the Subject list, the first two are "." and 
                     EEG = pop_loadcnt( PathFullFile , 'dataformat', 'auto', 'memmapfile', '');
 
                     % add the location map according to the channel_name
-                    EEG=pop_chanedit(EEG, 'lookup','E:\Lab\MI_3class_1limb\dataset\code\channel_dict.ced');
+                    EEG=pop_chanedit(EEG, 'lookup','Datasets\MI3class1Limb\code\channel_dict.ced');
                     
                     % Extract EMG and EOG channels
                     EMG = pop_select(EEG, 'channel', {'EMG1', 'EMG2'});
@@ -85,7 +85,8 @@ for NumSub = 3: TotSub % Iterate on the Subject list, the first two are "." and 
                         EEG = pop_select(EEG, 'notime', [0, EEG.urevent(1).latency/1000 - 4; EEG.urevent(end).latency/1000 + 5, EEG.xmax]);
                     %             EEG = pop_select(EEG, 'notime', [EEG.urevent(end).latency/1000 + 5, EEG.xmax]);
                     end
-                    
+                    CUTTEDEEG = EEG;
+
                     % re-reference, CAR,common average reference
                     % To be verified if referencing on CZ is the better
                     EEG = pop_reref( EEG, []);
@@ -120,7 +121,7 @@ for NumSub = 3: TotSub % Iterate on the Subject list, the first two are "." and 
                     
                     % Loading and saving bids parameters
                     % Copy and rename the files from the root to the individual folder
-                    PathRoot = 'E:\Lab\MI_3class_1limb\dataset\';
+                    PathRoot = 'Datasets\MI3class1Limb';
                     filestocopy = {'task-motorimagery_electrodes.tsv', 'task-motorimagery_coordsystem.json', 'task-motorimagery_channels.tsv', 'task-motorimagery_eeg.json'};
                     for i = 1:length(filestocopy)
                         FileName = [NameSub, '_', NameSes, '_', char(filestocopy{i})];
