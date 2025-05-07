@@ -11,7 +11,7 @@
 
 ### Dimensions & Properties
 - **Number of Trials**: 965 (300 Hand, 300 Elbow, 365 Rest)
-- **Number of Channels**: ~60 (EEG channels without EOG and EMG)
+- **Number of Channels**: 62 (EEG channels without EOG and EMG)
 - **Time Points per Trial**: ~360 (4 seconds at 90Hz sampling rate)
 - **Classes**:
   - 0: Rest state

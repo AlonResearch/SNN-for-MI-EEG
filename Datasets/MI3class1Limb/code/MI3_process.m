@@ -58,7 +58,7 @@ disp(checkPath) % display the path of the file being created
         NameTech = ListTech(NumTech).name; %EEG, EMG, EOG...
             % NameTech = 'EEG'
         PathFile = [PathTech, NameTech, '\'];
-        
+
         %
         % List all the files
         %
@@ -109,8 +109,8 @@ disp(checkPath) % display the path of the file being created
             EEGfiltered = EEG;
 
             % recsample to 90 Hz to reduce computational cost % Done on the postprocessing
-            EEG = pop_resample(EEG, 90);
-            EEGresampled = EEG;
+            %EEG = pop_resample(EEG, 90);
+            %EEGresampled = EEG;
             
             % remove base ???????????
             EEG = pop_rmbase(EEG, [1 EEG.times(end)]);   
